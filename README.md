@@ -1,4 +1,6 @@
 # Password-Generator
 This assignment focused on the development of JavaScript to allow for the user to enter information and choose their own properties that they would like in their password. 
 
-In my inital passthrough
+The section is broken down into 2 major functions: 1. Random Number Generator and 2. Write Password function. The Write Password function holds a variety of conditional statements that compare the user's answers to Booleans and determines which character set to implement based out of these options: Uppercase, Lowercase, Numbers, Special Characters. Similarly, a while statement was implemented to ensure that users do not enter numbers outside of the constraints of 8 to 128 characters. 
+
+This project proved to be difficult in the terms of debugging, with getting all elements to align with one another. Upon reflection, the usage of arrays and .join/.split could be a far more useful way to seperate a single variable containing all of the contents, and may be approached more in a future project, or refactoring of this one.

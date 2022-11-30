@@ -50,9 +50,11 @@ function writePassword() {
   if (specialChars === true){
     passwordcharacters += passwordCharSpecial
   }
+  //logic added to prevent user from entering numbers outside of the conditional, within 8 to 128 characters. 
   while(charLength<8 || charLength>128){
     charLength =prompt("Please enter the number of characters you would like for your password.\n\nPlease enter a number between 8 and 128.")
   }
+  //Calling on functions and element assignment to ensure that the password prints to the proper portion of the screen.
   randomNumGen(passwordcharacters, charLength);
   passwordText.value = password;
   console.log(password);
