@@ -1,17 +1,14 @@
 // Assignment code here
 var passwordCharSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*";
-// var passwordLength = querySelector.
-// generateBtn.addEventListener("click",displayParameters());
+var charLength = {
+  from: 8,
+  to: 128
+};
 
-function generatePassword(){
-  if (generateBtn.addEventListener("click", displayParameters)){
-    window.alert("Test")
-  }
+function displayParameters() {
+  var upperCase = querySelector
+  var lowerCase  
 
-}
-
-function displayParameters(){
-  window.alert("Test")
 }
 
 function randomNumGen() {
@@ -34,4 +31,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword);
