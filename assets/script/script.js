@@ -5,13 +5,15 @@ var passwordCharLower = "abcdefghijklmnopqrstuvwxyz";
 var passwordCharNum = "1234567890";
 var passwordCharSpecial = "!@#$%^&*";
 var password = " ";
-var charLength = {
+var passwordOutput = document.querySelector("#password");
+var passwordLength = {
   from: 8,
   to: 128
 };
 
 //random number generator
-function randomNumGen(passwordCharSet) {
+function randomNumGen(passwordCharSet, passwordLength) {
+  console.log(passwordCharSet)
   for (var i = 0; i <= passwordLength; i++) {
     var randomNum = Math.floor(Math.random()*passwordCharSet.length);
     password += passwordCharSet.substring(randomNum, randomNum+1);
@@ -36,24 +38,25 @@ function writePassword() {
   
   
   //Logic dictating responses and inputting into the random number generator
-  if (uppercaseLetters === 'true'){
+  if (uppercaseLetters === true){
     passwordcharacters += passwordCharUpper
   }
-  if (lowercaseLetters === 'true'){
+  if (lowercaseLetters === true){
     passwordcharacters += passwordCharLower
   }
-  if (NumChars === 'true'){
+  if (NumChars === true){
     passwordcharacters += passwordCharNum
   }
-  if (specialChars === 'true'){
+  if (specialChars === true){
     passwordcharacters += passwordCharSpecial
   }
   while(charLength<8 || charLength>128){
     charLength =prompt("Please enter the number of characters you would like for your password.\n\nPlease enter a number between 8 and 128.")
   }
-  randomNumGen(passwordcharacters);
+  randomNumGen(passwordcharacters, charLength);
   passwordText.value = password;
-
+  console.log(password);
+  passwordText.textContent = passwordOutput;
 }
 
 // Add event listener to generate button
